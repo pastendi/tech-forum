@@ -1,3 +1,14 @@
+from django.http import HttpResponse
 from django.shortcuts import render
 
-# Create your views here.
+
+def index(request):
+    return HttpResponse('Blog app')
+
+
+def all_posts(request):
+    pass  # passes the function with nothing
+
+
+def single_post(request):
+    pass
