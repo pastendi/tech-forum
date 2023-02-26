@@ -3,7 +3,7 @@ from django.shortcuts import render
 
 
 def index(request):
-    return HttpResponse('Blog app')
+    return render(request, 'blog/index.html')
 
 
 def all_posts(request):
