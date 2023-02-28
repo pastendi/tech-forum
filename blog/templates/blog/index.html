@@ -1,46 +1,22 @@
-{% extends 'base.html' %} 
+{% extends 'base.html' %}
 {% load static %}
-{% block title %} BLog {% endblock title %} 
-
+{% block title %}
+  BLog
+{% endblock title %}
 {% block app_css %}
-<link rel='stylesheet' href="{% static 'blog.css' %}" />
+  <link rel='stylesheet' href="{% static 'blog/index.css' %}" />
 {% endblock app_css %}
 {% block content %}
-<section id="greeting">
-  <h1>Blog app starting page</h1>
-</section>
-<section id="trendig">
-  <h1>Trendings Posts</h1>
-  <article>
-    <img src="{% static 'blog/images/scene1.jpg' %}" alt="Chat gpt" />
-    <div>
-      <h3>Magic of technology</h3>
-      <p>
-        Technology has completely revolutionized the way we live, work, and
-        communicate. From the invention of the wheel to the development of
-        artificial intelligence, technology has constantly evolved to improve
-        our lives in ways we could never have imagined. In this article, we'll
-        explore the impact of technology on various aspects of our lives and
-        discuss the latest advancements in technology.
-      </p>
-    </div>
-  </article>
-</section>
-<section id="new">
-  <h1>Latest Posts</h1>
-  <article>
-    <img src="{% static 'blog/images/scene2.jpg' %}" alt="Chat gpt" />
-    <div>
-      <h3>Magic of technology</h3>
-      <p>
-        Technology has completely revolutionized the way we live, work, and
-        communicate. From the invention of the wheel to the development of
-        artificial intelligence, technology has constantly evolved to improve
-        our lives in ways we could never have imagined. In this article, we'll
-        explore the impact of technology on various aspects of our lives and
-        discuss the latest advancements in technology.
-      </p>
-    </div>
-  </article>
-</section>
+  <section id="greeting">
+    <h1>Blog app starting page</h1>
+  </section>
+  <section id="trendig">
+    <h1>Trendings Posts</h1>
+    {% for post in posts %}
+      {% include 'blog/includes/post.html' %}
+    {% endfor %}
+  </section>
+  <section id="new">
+    <h1>Latest Posts</h1>
+  </section>
 {% endblock content %}

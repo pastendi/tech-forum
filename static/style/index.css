@@ -6,3 +6,7 @@
 body{
     background: lightblue;
 }
+img {
+    height: 300px;
+    width: auto;
+}

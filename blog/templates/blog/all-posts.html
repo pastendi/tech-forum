@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+  All posts
+{% endblock title %}
+{% block app_css %}
+  <link rel='stylesheet' href="{% static 'blog/posts.css' %}" />
+{% endblock app_css %}
+{% block content %}
+  <section>
+    <h2>All posts</h2>
+  </section>
+{% endblock content %}

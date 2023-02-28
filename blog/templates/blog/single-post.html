@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+  {{ post.title }}
+{% endblock title %}
+{% block app_css %}
+  <link rel='stylesheet' href="{% static 'blog/single-post.css' %}" />
+{% endblock app_css %}
+{% block content %}
+  <article>
+    <img src="{% static 'images/'|add:post.image %}" alt="Chat gpt" />
+    <div>
+      <h3>{{ post.title }}</h3>
+      <p>{{ post.content }}</p>
+    </div>
+  </article>
+{% endblock content %}
