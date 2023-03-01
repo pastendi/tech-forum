@@ -1,4 +1,10 @@
-h1{
+h1 {
     text-align: center;
-    color:grey;
+    color: grey;
+}
+
+.latest-posts {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr 1fr 1fr;
 }

@@ -7,11 +7,32 @@
   <link rel='stylesheet' href="{% static 'blog/single-post.css' %}" />
 {% endblock app_css %}
 {% block content %}
-  <article>
-    <img src="{% static 'images/'|add:post.image %}" alt="Chat gpt" />
-    <div>
-      <h3>{{ post.title }}</h3>
-      <p>{{ post.content }}</p>
-    </div>
-  </article>
+  <div class="template">
+    <section class="left-side">
+      <a href="#">
+        <div class="author-info">
+          <div class="author-profile">
+            <img src="{% static 'images/'|add:post.image %}" class="profile" alt="">
+          </div>
+          <div class="author">
+            <h3>{{ post.author }}</h3>
+            <p>{{ post.date }}</p>
+          </div>
+        </div>
+      </a>
+      <h1>{{ post.title }}</h1>
+      <p>
+        <b>Tags:</b>
+        {% for tag in tags %}<span class="tag">#{{ tag.caption }}</span>{% endfor %}
+      </p>
+      <img src="{% static 'images/'|add:post.image %}"
+           class="post-image"
+           alt="Chat gpt"/>
+      <p class="content">{{ post.content }}</p>
+    </section>
+    <section class="right-side">
+      <div>About author</div>
+      <div>Related posts</div>
+    </section>
+  </div>
 {% endblock content %}

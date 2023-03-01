@@ -18,7 +18,9 @@
         <nav>
             <a href="{% url 'blog-index' %}">Navigation</a> <a href="{% url 'blog-posts' %}">Posts</a>
         </nav>
-        {% block content %}
-        {% endblock content %}
+        <div class="main-body">
+            {% block content %}
+            {% endblock content %}
+        </div>
     </body>
 </html>

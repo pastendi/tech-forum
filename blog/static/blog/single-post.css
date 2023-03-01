@@ -1,3 +1,46 @@
-h1{
-    color: blue;
+.template {
+    display: grid;
+    grid-template-columns: 70% 30%;
+}
+
+.author-info {
+    display: flex;
+    flex-direction: row;
+}
+
+.profile {
+    vertical-align: middle;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.author {
+    margin-left: 1rem;
+}
+
+.tag {
+    color: blueviolet;
+    padding: 0 0.1rem;
+}
+
+h3 {
+    font-size: 1.5 rem;
+}
+
+.post-image {
+    padding: 20px;
+}
+
+.left-side {
+    padding: 1rem;
+}
+
+.content {
+    font-size: 1.4rem;
+}
+
+.right-side {
+    background: white;
+    padding: 1rem;
 }

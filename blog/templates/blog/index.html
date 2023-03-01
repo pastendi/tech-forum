@@ -10,13 +10,12 @@
   <section id="greeting">
     <h1>Blog app starting page</h1>
   </section>
-  <section id="trendig">
-    <h1>Trendings Posts</h1>
-    {% for post in posts %}
-      {% include 'blog/includes/post.html' %}
-    {% endfor %}
-  </section>
   <section id="new">
     <h1>Latest Posts</h1>
+    <div class="latest-posts center-content">
+      {% for post in posts %}
+        {% include 'blog/includes/post.html' %}
+      {% endfor %}
+    </div>
   </section>
 {% endblock content %}

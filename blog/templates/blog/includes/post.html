@@ -1,10 +1,17 @@
 {% load static %}
+{% block app_css %}
+    <link rel="stylesheet" href="{% static 'blog/post.css' %}">
+{% endblock app_css %}
 <a href="{% url 'blog-single-post' post.slug %}">
     <article>
-        <img src="{% static 'images/'|add:post.image %}" alt="{{ post.image }}" />
-        <div>
+        <div class='about'>
             <h3>{{ post.title }}</h3>
-            <p>{{ post.content }}</p>
+            <h5>{{ post.author }}</h5>
+            <p>{{ post.date }}</p>
+        </div>
+        <div class='small-image'>
+            <img src="{% static 'images/'|add:post.image %}" alt="{{ post.image }}" />
         </div>
     </article>
 </a>
+{% comment %} <p class='content'>{{ post.content| slice:":100" }}...</p> {% endcomment %}
