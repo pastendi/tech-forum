@@ -9,5 +9,8 @@
 {% block content %}
   <section>
     <h2>All posts</h2>
+    {% for post in posts %}
+      {% include 'blog/includes/post.html' %}
+    {% endfor %}
   </section>
 {% endblock content %}
