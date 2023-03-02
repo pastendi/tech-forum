@@ -12,7 +12,7 @@
       <a href="#">
         <div class="author-info">
           <div class="author-profile">
-            <img src="{% static 'images/'|add:post.image %}" class="profile" alt="">
+            <img src="{{ post.image.url }}" class="profile" alt="">
           </div>
           <div class="author">
             <h3>{{ post.author }}</h3>
@@ -25,9 +25,7 @@
         <b>Tags:</b>
         {% for tag in tags %}<span class="tag">#{{ tag.caption }}</span>{% endfor %}
       </p>
-      <img src="{% static 'images/'|add:post.image %}"
-           class="post-image"
-           alt="Chat gpt"/>
+      <img src="{{ post.image.url }}" class="post-image" alt="Chat gpt"/>
       <p class="content">{{ post.content }}</p>
     </section>
     <section class="right-side">
